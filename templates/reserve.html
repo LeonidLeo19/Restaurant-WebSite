@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='reservation.css') }}">
+    <title>Reserve Table</title>
+</head>
+<body>
+    <h1>Reserve Table for Day {{ day }}</h1>
+    {% if free_tables == 0 %}
+        <p style="color:red;">No tables available for this day. Please choose another day.</p>
+    {% endif %}
+    <form action="/succsess" method="post">
+        <input type="hidden" name="reservation_date" value="{{ day }}">
+
+        {% for table in free_tables %}
+            <input type="radio" 
+                   id="table{{ table.table_number }}" 
+                   name="table_id" 
+                   value="{{ table.id }}" required>
+            <label for="table{{ table.table_number }}">
+                Table Number: {{ table.table_number }}, Seats: {{ table.seats }}
+            </label><br>
+        {% endfor %}
+
+        <button type="submit">Reserve Selected Table</button>
+    </form>
+    <a href="/">Back to Home</a>
+</html>

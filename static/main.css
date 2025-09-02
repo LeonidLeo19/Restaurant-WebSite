@@ -1,0 +1,123 @@
+body {
+    background-color: #212222;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+}
+
+a{
+    font-size: 40px;
+    color: #FFD700;
+    text-decoration: none;
+    font-weight: bold;
+}
+.welcome-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #ffffff;
+}
+h1 {
+    color: #FFD700;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+    font-family: 'Playfair Display', serif;
+    display: flex;
+    margin-top: 40px;
+    justify-content: center;
+    font-size: 2.5em;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+h2 {
+    color: #ffffff;
+    font-family: 'Playfair Display', serif;
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+    font-size: 1.5em;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+}
+.navigation {
+    display: flex;
+    font-family: 'Playfair Display', serif;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 110px;
+    margin-left: 20px;
+    gap: 320px;
+    position: relative;
+}
+
+.login {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    background: #df9c1f;
+    color: #fff;
+    padding: 12px 28px;
+    border-radius: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: background 0.2s;
+}
+.login:hover {
+    background:#8a5700;
+    }
+.image-container {
+    display: flex;
+    justify-content: center;
+    gap: 120px;
+    position: absolute;
+    top: 39%;
+    left: 10%;
+    /* transform: translate(-50%, -30%); */
+    width: 80%;
+}
+
+.image-container img {
+    width: 30%;
+    height: auto;
+    pointer-events: none;
+}
+
+p {
+    font-size: 1.2em;
+    color: #ffffff;
+    margin-top: 10px;
+    margin-left: 40px;
+    line-height: 1.6;
+    max-width: 600px;
+}
+
+li {
+    font-size: 1.2em;
+    color: #ffffff;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* Responsive styles for all devices */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5em;
+        margin-top: 20px;
+        letter-spacing: 1px;
+    }
+    body {
+        padding: 10px;
+    }
+}

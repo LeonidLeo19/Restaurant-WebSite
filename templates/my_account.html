@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/main.css">
+    <title>My_account</title>
+</head>
+<body>
+    <h1>My Account</h1>
+    <p>Your reservations:</p>
+    <ul>
+        {% for reservation in user_reservations %}
+            <li>
+                Date: {{ reservation.reservation_date }} | Table: {{ reservation.table_number }}
+                <form action="/cancel_reservation" method="post" style="display:inline;">
+                    <input type="hidden" name="reservation_id" value="{{ reservation.id }}">
+                    <button type="submit">Cancel reservation</button>
+                </form>
+            </li>
+        {% else %}
+            <li>No reservations found.</li>
+        {% endfor %}
+    <a href="/reservation">Make a Reservation</a>
+    <br>
+    <a href="/logout">Logout</a>
+    <br>
+    <a href="/">Back to Home</a>
+</html>

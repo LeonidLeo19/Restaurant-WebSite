@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='reservation.css') }}">
+    <title>Reservation</title>
+</head>
+<body>
+    <h1>Reservation</h1>
+    <form action="/reserve" method="post">
+    <label for="reservation_date">Choose a day:</label>
+    <input type="date" 
+           id="reservation_date" 
+           name="reservation_date" 
+           min="{{ min_date }}" 
+           max="{{ max_date }}">
+    <button type="submit">Confirm the selection</button>
+</form>
+    <a href="/">Back to Home</a>
+</body>
+</html>
