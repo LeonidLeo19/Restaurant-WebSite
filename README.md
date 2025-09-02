@@ -28,7 +28,7 @@ A pet project of a restaurant with an online table reservation feature. Built wi
 ---
 
 ## 🗂️ Project Structure
-
+```
 Restaurant-WebSite/
 ├─ main.py # Entry point (Flask app)
 ├─ templates/ # Jinja2 HTML templates
@@ -48,9 +48,7 @@ Restaurant-WebSite/
 ├─ db/ # Database / utilities
 │ └─ restaurant.db # (auto-generated)
 └─ Screenshots of project/ # UI screenshots
-
-yaml
-Копировать код
+```
 
 ---
 
@@ -135,7 +133,7 @@ Restaurant-WebSite/
 ├─ db/                     # База даних / утиліти
 │  └─ restaurant.db        # (створюється автоматично)
 └─ Screenshots of project/ # Скріншоти UI
-
+```
 
 ---
 
